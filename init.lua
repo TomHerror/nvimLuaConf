@@ -4,6 +4,8 @@ require("after.plugin.colors")
 require("after.plugin.undotree")
 require("after.plugin.lsp")
 require("after.plugin.rust")
+require("after.plugin.lualine")
+
 
 -- listchars
 vim.opt.list = true
