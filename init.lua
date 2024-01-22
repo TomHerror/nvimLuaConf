@@ -5,6 +5,7 @@ require("after.plugin.undotree")
 require("after.plugin.lsp")
 require("after.plugin.rust")
 require("after.plugin.lualine")
+require("after.plugin.barbar")
 
 
 -- listchars
