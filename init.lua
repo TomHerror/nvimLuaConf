@@ -19,3 +19,5 @@ vim.opt.shiftwidth = 4
 
 -- autopair
 require("autoclose").setup()
+-- comment
+require('Comment').setup()

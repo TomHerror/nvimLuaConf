@@ -90,7 +90,7 @@ ins_left {
 ins_left {
 	-- mode component
 	function()
-		return '✘_ ✘'
+		return '✘_✘ 🧪'
 	end,
 	color = function()
 		-- auto change color according to neovims mode
