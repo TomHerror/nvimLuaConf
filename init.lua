@@ -7,7 +7,6 @@ require("after.plugin.rust")
 require("after.plugin.lualine")
 require("after.plugin.barbar")
 
-
 -- listchars
 vim.opt.list = true
 vim.opt.listchars = { space = '·', tab = '>~', eol = '↵' }

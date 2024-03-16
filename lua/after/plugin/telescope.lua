@@ -8,6 +8,11 @@ vim.keymap.set('n', '<leader>fs', function()
 end)
 
 require('telescope').setup {
+	pickers = {
+		find_files = {
+			theme = "dropdown"
+		}
+	},
 	extensions = {
 		file_browser = {
 			theme = "ivy"
