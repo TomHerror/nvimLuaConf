@@ -29,8 +29,8 @@ return require('packer').startup(function(use)
 	-- gruvbox theme
 	use { "luisiacc/gruvbox-baby" }
 
-	-- tree-sitter
-	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+	-- -- tree-sitter
+	-- use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
 	-- undo tree
 	use { 'mbbill/undotree' }
@@ -82,13 +82,39 @@ return require('packer').startup(function(use)
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
 
-<<<<<<< HEAD
 	-- barbar (tabs)
 	-- These optional plugins should be loaded directly because of a bug in Packer lazy loading
 	use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
-	use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+	use 'lewis6991/gitsigns.nvim'  -- OPTIONAL: for git status
 	use 'romgrk/barbar.nvim'
 
-=======
->>>>>>> 3df4084 (lualine (status bar))
+	-- indent blanckline
+	use "lukas-reineke/indent-blankline.nvim"
+
+	-- wich key (help for keybind :))
+	use {
+		"folke/which-key.nvim",
+		config = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+			require("which-key").setup {
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			}
+		end
+	}
+
+	-- noice.nvim
+	use {
+		"folke/noice.nvim",
+		requires = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		}
+	}
 end)
